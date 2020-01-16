@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
+  number: number;
   constructor() { }
 
   ngOnInit() {
   }
+
+  getNumber(number: number) {
+    this.number = number;
+  }
+
 
 }

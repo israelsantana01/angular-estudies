@@ -1,0 +1,44 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="form" (submit)="addConsole()">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="registeredName">Registered Name</label>
+              <input class="form-control" type="text" id="registeredName" formControlName="registeredName">
+              <small *ngIf="form.get('registeredName').touched && form.get('registeredName').invalid">Invalid Field</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="tradingName">Trading Name</label>
+              <input class="form-control" type="text" id="tradingName" formControlName="tradingName">
+              <small *ngIf="form.get('tradingName').touched && form.get('tradingName').invalid">Invalid Field</small>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="taxPayerRegistration">Tax payer registration</label>
+              <input class="form-control" type="text" id="taxPayerRegistration" formControlName="taxPayerRegistration">
+              <small *ngIf="form.get('taxPayerRegistration').touched && form.get('taxPayerRegistration').invalid">Invalid Field</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="stateSubscription">State subscription</label>
+              <input class="form-control" type="text" id="stateSubscription" formControlName="stateSubscription">
+              <small *ngIf="form.get('stateSubscription').touched && form.get('stateSubscription').invalid">Invalid Field</small>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success btn-block" type="submit" [disabled]="form.invalid">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
