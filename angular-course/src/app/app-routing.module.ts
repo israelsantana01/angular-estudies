@@ -1,3 +1,4 @@
+import { NgIfNgForComponent } from './ng-if-ng-for/ng-if-ng-for.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -6,7 +7,8 @@ import { SecondComponentComponent } from './second-component/second-component.co
 
 const routes: Routes = [
   { path: 'first-component', component: DataBindingComponent },
-  { path: 'second-component', component: SecondComponentComponent }
+  { path: 'second-component', component: SecondComponentComponent },
+  { path: 'test', component: NgIfNgForComponent }
 ];
 
 @NgModule({
