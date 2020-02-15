@@ -6,9 +6,22 @@ import { SecondComponentComponent } from './second-component/second-component.co
 
 
 const routes: Routes = [
-  { path: 'first-component', component: DataBindingComponent },
-  { path: 'second-component', component: SecondComponentComponent },
-  { path: 'test', component: NgIfNgForComponent }
+  {
+    path: 'lazy',
+    loadChildren: './modules/lazy-loading/lazy-loading.module#LazyLoadingModule'
+  },
+  {
+    path: 'first-component',
+    component: DataBindingComponent
+  },
+  {
+    path: 'second-component',
+    component: SecondComponentComponent
+  },
+  {
+    path: 'test',
+    component: NgIfNgForComponent
+  }
 ];
 
 @NgModule({
